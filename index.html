@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="demo">
+</div>	
+<div class="demo1">
+
+	<h1 class="hi">hi</h1>
+</div>
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="js/anime.min.js" type="text/javascript"></script>
+<script src="js/ScrollMagic.js" type="text/javascript"></script>
+<script>
+
+// $(document).ready(function(){
+
+// var cssSelector = anime({
+//   targets: '.demo',
+//   
+// });
+
+// });
+	var basicTimeline = anime.timeline();
+
+basicTimeline
+  .add({
+    targets: '.demo',
+    translateX:window.innerWidth-100,
+    easing: 'easeOutExpo'
+  })
+  .add({
+    targets: '.demo',
+    backgroundColor: '#E55D87',
+    translateX:window.innerWidth-100,
+    translateY:window.innerHeight-100,
+    easing: 'easeOutExpo'
+  })
+   .add({
+    targets: '.demo',
+    backgroundColor:'#5FC3E4',
+    translateY:window.innerHeight-100,
+    translateX:0,
+    easing: 'easeOutExpo'
+  })
+   .add({
+    targets: '.demo',
+    backgroundColor: '#003973',
+    translateX:0,
+    translateY:window.innerHeight-550,
+    easing: 'easeOutExpo'
+  }) .add({
+    targets: '.demo',
+    backgroundColor: '#CC95C0',
+    translateY:window.innerHeight-550,
+    translateX:window.innerWidth-200,
+    easing: 'easeOutExpo'
+  }).add({
+    targets: '.demo',
+    backgroundColor: '#7AA1D2',
+   translateX:window.innerWidth-200,
+     translateY:window.innerHeight-200,
+    easing: 'easeOutExpo'
+  })
+  .add({
+    targets: '.demo',
+    backgroundColor: '#3CA55C',
+    translateY:window.innerHeight-200,
+    translateX:window.innerWidth-800,
+    easing: 'easeOutExpo'
+  }).add({
+    targets: '.demo',
+   backgroundColor: '##B5AC49',
+    translateX:window.innerWidth-800,
+     translateY:window.innerHeight-400,
+    easing: 'easeOutExpo'
+  }).add({
+    targets: '.demo',
+   backgroundColor: '#16A085',
+     translateY:window.innerHeight-400,
+     translateX:window.innerWidth-600,
+      borderRadius: ['0%', '50%'],
+      scale: 7,
+         zIndex: {
+    value: [0, 1],
+    round:true
+},
+    easing: 'easeOutExpo'
+  }).add({
+    targets: '.hi',
+    color:'#fff',
+    opacity: 1,
+     zIndex: {
+    value: [1, 5],
+    round: true
+  }
+
+  });
+  
+
+
+
+</script>
+</body>
+</html>
